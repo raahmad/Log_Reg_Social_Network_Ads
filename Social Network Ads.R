@@ -88,7 +88,7 @@ new.data.Purchaed[,2]<-as.factor(new.data.Purchaed[,2])
 prob_Purchased1<-predict.glm(logistic_purchased,newdata = new.data.Purchaed, type = "response")
 prob_Purchased1<-as.data.frame(prob_Purchased1)
 #Roughly 7.6% probability
-
+#Result recorded in Probability.xlsx
 
 #Data frame if someone is above average age and has below average salary
 new.data.Purchased2<-as.data.frame(matrix(c(1,0),nrow = 1))
@@ -103,7 +103,7 @@ new.data.Purchased2[,2]<-as.factor(new.data.Purchased2[,2])
 prob_Purchased2<-predict.glm(logistic_purchased,newdata = new.data.Purchased2, type = "response")
 prob_Purchased2<-as.data.frame(prob_Purchased2)
 #Roughly 44.3% probability
-
+#Result recorded in Probability.xlsx
 
 #Data frame if someone is below average age and has above average salary
 new.data.Purchased3<-as.data.frame(matrix(c(0,1),nrow = 1))
@@ -118,7 +118,7 @@ new.data.Purchased3[,2]<-as.factor(new.data.Purchased3[,2])
 prob_Purchased3<-predict.glm(logistic_purchased,newdata = new.data.Purchased3, type = "response")
 prob_Purchased3<-as.data.frame(prob_Purchased3)
 #Roughly 22% probability
-
+#Probability recorded in Probability.xlsx
 
 #Data frame if someone is above average age and has above average salary
 new.data.Purchased4<-as.data.frame(matrix(c(1,1),nrow = 1))
@@ -133,3 +133,4 @@ new.data.Purchased4[,2]<-as.factor(new.data.Purchased4[,2])
 prob_Purchased4<-predict.glm(logistic_purchased,newdata = new.data.Purchased4, type = "response")
 prob_Purchased4<-as.data.frame(prob_Purchased4)
 #Roughly 73.2% probability
+#Probability recorded in Probability.xlsx
